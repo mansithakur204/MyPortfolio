@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Code2, Database, Smartphone, Globe, Zap, Heart } from 'lucide-react';
 
 const About = () => {

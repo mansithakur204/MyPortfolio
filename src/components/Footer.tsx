@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Code2, Heart, ArrowUp } from 'lucide-react';
 
 const Footer = () => {

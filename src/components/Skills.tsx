@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Code2, Server, Wrench, Zap } from 'lucide-react';
 
 const Skills = () => {

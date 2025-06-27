@@ -1,5 +1,9 @@
-import React from 'react';
-import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles, Code2 } from 'lucide-react';
+
+import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles, Code2, Instagram } from 'lucide-react';
+import mansi from '../../img/mansi.png';
+
+
+
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -29,9 +33,7 @@ const Hero = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
                 <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/img/mansi.png" 
-                    alt="Mansi Singh" 
+                 <img src={mansi} alt="Profile" 
                     className="w-full h-full rounded-full object-cover"
                   />
                 </div>
@@ -56,8 +58,8 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
-                I’m an aspiring web developer <span className="text-purple-400 font-semibold">currently learning the craft of building modern, user-centric websites using tools like React and JavaScript</span> With every new challenge, project, or concept, I not only sharpen my technical skills but also find creative ways to make the web more intuitive and accessible. I believe in learning by doing — and with each step forward
-                <span className="text-pink-400 font-semibold"> I continue to grow into a developer with purpose and passion.</span>.
+                I’m a self-driven <span className="text-purple-400 font-semibold">Web developer</span> turning curiosity into clean code and ideas 
+                <span className="text-pink-400 font-semibold">into interactive experiences.</span>.
               </p>
             </div>
 
@@ -88,19 +90,23 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
               
-              <button className="group px-8 py-4 border-2 border-purple-400 text-purple-400 hover:text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-purple-400 hover:scale-105 flex items-center space-x-2">
+              <a href={`${import.meta.env.BASE_URL}img/MansiCV.pdf`}
+              download
+              className="group px-8 py-4 border-2 border-purple-400 text-purple-400 hover:text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-purple-400 hover:scale-105 flex items-center space-x-2"
+              >
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
-                <span>Download Resume</span>
-              </button>
+                <span>Download My CV</span>
+              </a>
               
             </div>
 
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
               {[
-                { icon: Github, href: "#https://github.com/mansithakur204", label: "GitHub", color: "hover:text-gray-300" },
-                { icon: Linkedin, href: "#https://www.linkedin.com/in/mansi-singh-989ab4325/", label: "LinkedIn", color: "hover:text-blue-400" },
-                { icon: Mail, href: "#", label: "Email", color: "hover:text-purple-400" }
+                { icon: Github, href: "https://github.com/mansithakur204", label: "GitHub", color: "hover:text-gray-300" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/mansi-singh-989ab4325/", label: "LinkedIn", color: "hover:text-blue-400" },
+                { icon: Instagram, href: "https://www.instagram.com/mansi.singh.official07/", label: "Email", color: "hover:text-purple-400" },
+                 { icon: Mail, href: "mailto:singhmansi1510@gmail.com?subject=Portfolio Inquiry&body=Hi Mansi,", label: "Email", color: "hover:text-purple-400" }
               ].map(({ icon: Icon, href, label, color }) => (
                 <a
                   key={label}
