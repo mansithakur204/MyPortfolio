@@ -91,8 +91,7 @@ const Hero = () => {
               </button>
         
         
-              <a href={`${import.meta.env.BASE_URL}img/MansiCV.pdf`}
-
+              <a  href="/MansiCV.pdf"
               download
               className="group px-8 py-4 border-2 border-purple-400 text-purple-400 hover:text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-purple-400 hover:scale-105 flex items-center space-x-2"
               >
