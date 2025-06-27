@@ -135,7 +135,7 @@ const handleSubmit = (e: React.FormEvent) => {
 
             {/* Contact Methods */}
             <div className="space-y-6">
-              {contactInfo.map((item, index) => (
+              {contactInfo.map((item) => (
                 <a
                  key={`${item.title}-${item.value}`}
 
