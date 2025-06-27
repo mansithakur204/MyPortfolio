@@ -89,8 +89,10 @@ const Hero = () => {
                 <span className="relative z-10">View My Work</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
-              
+        
+        
               <a href={`${import.meta.env.BASE_URL}img/MansiCV.pdf`}
+
               download
               className="group px-8 py-4 border-2 border-purple-400 text-purple-400 hover:text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-purple-400 hover:scale-105 flex items-center space-x-2"
               >
