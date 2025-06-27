@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle, Zap } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Instagram, MessageCircle, Zap } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
 
@@ -16,30 +16,46 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  emailjs.send(
+    'service_mqi7l8m',
+    'template_n70tjdo',     
+    {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message
+    },
+    'JC-CLj3NYy3-3UMdi'       
+  )
+  .then(() => {
+    alert('Message sent successfully! 🚀');
+    setFormData({ name: '', email: '', message: '' }); // reset the form
+  })
+  .catch((error) => {
+    console.error('Error sending email:', error);
+    alert('Oops! Something went wrong 😔');
+  });
+};
+
+
+
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      value: "mansi.singh@example.com",
-      href: "mailto:mansi.singh@example.com",
+      value: "singhmansi1510@gmail.com",
+      href: "mailto:singhmansi1510@gmail.com",
       color: "from-purple-500 to-pink-500"
     },
-    {
-      icon: Phone,
-      title: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
-      color: "from-blue-500 to-cyan-500"
-    },
+
     {
       icon: MapPin,
       title: "Location",
-      value: "Mumbai, India",
+      value: "Unnao, India",
       href: "#",
       color: "from-green-500 to-emerald-500"
     }
@@ -48,22 +64,22 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: Github,
-      href: "#",
+      href: "https://github.com/mansithakur204",
       label: "GitHub",
       color: "hover:text-gray-300",
       bg: "hover:bg-gray-700"
     },
     {
       icon: Linkedin,
-      href: "#",
+      href: "https://www.linkedin.com/in/mansi-singh-989ab4325/",
       label: "LinkedIn",
       color: "hover:text-blue-400",
       bg: "hover:bg-blue-500/10"
     },
     {
-      icon: Twitter,
-      href: "#",
-      label: "Twitter",
+      icon: Instagram,
+      href: "https://www.instagram.com/mansi.singh.official07/",
+      label: "Instagram",
       color: "hover:text-blue-400",
       bg: "hover:bg-blue-500/10"
     }
@@ -121,7 +137,8 @@ const Contact = () => {
             <div className="space-y-6">
               {contactInfo.map((item, index) => (
                 <a
-                  key={index}
+                 key={`${item.title}-${item.value}`}
+
                   href={item.href}
                   className="group flex items-center space-x-6 p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl hover:border-purple-500/30 transition-all duration-300 hover:scale-105"
                 >
@@ -196,21 +213,6 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="space-y-2">
-                <label htmlFor="subject" className="block text-sm font-semibold text-purple-400">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-4 bg-gray-800/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
-                  placeholder="Project Collaboration"
-                />
-              </div>
               
               <div className="space-y-2">
                 <label htmlFor="message" className="block text-sm font-semibold text-purple-400">

@@ -107,11 +107,11 @@ const Hero = () => {
               {[
                 { icon: Github, href: "https://github.com/mansithakur204", label: "GitHub", color: "hover:text-gray-300" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/mansi-singh-989ab4325/", label: "LinkedIn", color: "hover:text-blue-400" },
-                { icon: Instagram, href: "https://www.instagram.com/mansi.singh.official07/", label: "Email", color: "hover:text-purple-400" },
+                { icon: Instagram, href: "https://www.instagram.com/mansi.singh.official07/", label: "Instagram", color: "hover:text-purple-400" },
                  { icon: Mail, href: "mailto:singhmansi1510@gmail.com?subject=Portfolio Inquiry&body=Hi Mansi,", label: "Email", color: "hover:text-purple-400" }
               ].map(({ icon: Icon, href, label, color }) => (
                 <a
-                  key={label}
+                  key={`${label}-${href}`}
                   href={href}
                   className={`group w-14 h-14 bg-white/5 backdrop-blur-sm rounded-2xl flex items-center justify-center ${color} transition-all duration-300 hover:scale-110 hover:bg-white/10 border border-white/10 hover:border-purple-400/50`}
                   aria-label={label}

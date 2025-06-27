@@ -66,16 +66,16 @@ const About = () => {
               <div className="group bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 p-6 rounded-2xl hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-3 mb-2">
                   <Zap className="h-6 w-6 text-purple-400" />
-                  <h3 className="text-3xl font-bold text-white">2+</h3>
+                  <h3 className="text-3xl font-bold text-white">Currently learning and building projects </h3>
                 </div>
                 <p className="text-gray-400 font-medium">Years of Experience</p>
               </div>
               <div className="group bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-pink-500/20 p-6 rounded-2xl hover:border-pink-400/40 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-3 mb-2">
-                  <Code2 className="h-6 w-6 text-pink-400" />
-                  <h3 className="text-3xl font-bold text-white">15+</h3>
+                  {/* <Code2 className="h-6 w-6 text-pink-400" /> */}
+                  <h3 className="text-3xl font-bold text-white">On a journey to write cleaner and more maintainable code</h3>
                 </div>
-                <p className="text-gray-400 font-medium">Projects Delivered</p>
+                <p className="text-gray-400 font-medium">Clean Code</p>
               </div>
             </div>
 
