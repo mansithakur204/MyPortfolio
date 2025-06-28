@@ -1,5 +1,5 @@
 
-import { Code2, Database, Smartphone, Globe, Zap, Heart } from 'lucide-react';
+import { Code2, Database, Smartphone, Globe, Heart } from 'lucide-react';
 
 const About = () => {
   const highlights = [
@@ -60,24 +60,7 @@ const About = () => {
                 <span className="text-pink-400 font-semibold"> beautiful, intuitive, and impactful</span>.
               </p>
             </div>
-
-            {/* Achievement Cards */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="group bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 p-6 rounded-2xl hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-3 mb-2">
-                  <Zap className="h-6 w-6 text-purple-400" />
-                  <h3 className="text-3xl font-bold text-white">Currently learning and building projects </h3>
-                </div>
-                <p className="text-gray-400 font-medium">Years of Experience</p>
-              </div>
-              <div className="group bg-gradient-to-br from-pink-500/10 to-purple-500/10 border border-pink-500/20 p-6 rounded-2xl hover:border-pink-400/40 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-3 mb-2">
-                  {/* <Code2 className="h-6 w-6 text-pink-400" /> */}
-                  <h3 className="text-3xl font-bold text-white">On a journey to write cleaner and more maintainable code</h3>
-                </div>
-                <p className="text-gray-400 font-medium">Clean Code</p>
-              </div>
-            </div>
+            
 
             {/* Philosophy */}
             <div className="bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-500/20 rounded-2xl p-6">
