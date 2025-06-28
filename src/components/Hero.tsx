@@ -1,6 +1,7 @@
 
 import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles, Code2, Instagram } from 'lucide-react';
 import mansi from '../../img/mansi.png';
+import mansicv from '../../img/MansiCV.pdf';
 
 
 
@@ -93,7 +94,7 @@ const Hero = () => {
               </button>
         
         
-              <a href="/img/MansiCV.pdf"
+              <a href={mansicv}
               download
               className="group px-8 py-4 border-2 border-purple-400 text-purple-400 hover:text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:bg-purple-400 hover:scale-105 flex items-center space-x-2"
               >
