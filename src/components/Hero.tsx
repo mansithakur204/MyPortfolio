@@ -27,8 +27,10 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center relative z-10">
         <div className="space-y-12">
+
+
           {/* Profile Section */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mt-14 mb-12">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
