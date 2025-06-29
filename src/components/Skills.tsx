@@ -8,12 +8,11 @@ const Skills = () => {
       icon: Code2,
       color: "from-purple-500 to-pink-500",
       skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 85 },
+        { name: "React", level: 80 },
+        { name: "TypeScript", level: 75 },
         { name: "Tailwind CSS", level: 95 },
-        { name: "JavaScript", level: 95 },
-        { name: "HTML/CSS", level: 98 }
+        { name: "JavaScript", level: 85 },
+        { name: "HTML/CSS", level: 95 }
       ]
     },
     {
@@ -21,9 +20,8 @@ const Skills = () => {
       icon: Server,
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "Node.js", level: 90 },
+        { name: "Node.js", level: 80 },
         { name: "Express.js", level: 85 },
-        { name: "Python", level: 80 },
         { name: "PostgreSQL", level: 85 },
         { name: "MongoDB", level: 80 },
         { name: "REST APIs", level: 90 }
@@ -37,16 +35,15 @@ const Skills = () => {
         { name: "Git", level: 95 },
         { name: "Docker", level: 75 },
         { name: "AWS", level: 70 },
-        { name: "Figma", level: 85 },
-        { name: "Webpack", level: 80 },
+        { name: "Figma", level: 80 },
         { name: "Jest", level: 75 }
       ]
     }
   ];
 
   const techStack = [
-    "React", "Node.js", "TypeScript", "Python", "PostgreSQL", 
-    "MongoDB", "AWS", "Docker", "Git", "Figma", "Next.js", "Tailwind"
+    "React", "Node.js", "TypeScript",
+    "MongoDB", "Git", "JavaScript", "Tailwind"
   ];
 
   return (
